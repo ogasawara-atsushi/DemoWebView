@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QUl-FF-LMD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Hgi-nZ-Fcv">
+            <objects>
+                <viewController id="QUl-FF-LMD" customClass="ViewController" customModule="DemoWebView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Odq-DQ-JfI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOV-ie-2L5">
+                                <rect key="frame" x="95" y="221" width="185" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="UIWebViewのリダイレクト"/>
+                                <connections>
+                                    <action selector="openUIWebViewDidTapped:" destination="QUl-FF-LMD" eventType="touchUpInside" id="0Q7-Oi-nOq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfT-mJ-x20">
+                                <rect key="frame" x="90" y="265" width="195" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="WKWebViewのリダイレクト"/>
+                                <connections>
+                                    <action selector="openWKWebViewDidTapped:" destination="QUl-FF-LMD" eventType="touchUpInside" id="xOv-TJ-Sey"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1e4-aq-q8X">
+                                <rect key="frame" x="143" y="313" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clear Cookie"/>
+                                <connections>
+                                    <action selector="clearCookieDidTapped:" destination="QUl-FF-LMD" eventType="touchUpInside" id="TzA-7e-AW6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="IBe-1F-ktN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ORz-OP-QbD" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2" y="-48"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="QLE-UB-lYM">
+            <objects>
+                <viewController restorationIdentifier="UIWebViewControllerID" storyboardIdentifier="UIWebViewControllerID" id="yxV-Cq-jFa" customClass="UIWebViewController" customModule="DemoWebView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ps9-wf-zt1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Bx-5h-mBj">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoF-s5-xVm">
+                                <rect key="frame" x="31" y="617" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="goBack" destination="5Bx-5h-mBj" eventType="touchDown" id="Nyv-J1-Mzj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7b-iy-d2q">
+                                <rect key="frame" x="92" y="617" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeDidTapped:" destination="yxV-Cq-jFa" eventType="touchUpInside" id="x8t-Ng-4pH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1ri-wZ-zaZ" firstAttribute="bottom" secondItem="5Bx-5h-mBj" secondAttribute="bottom" id="1lb-Ii-uIe"/>
+                            <constraint firstItem="5Bx-5h-mBj" firstAttribute="leading" secondItem="1ri-wZ-zaZ" secondAttribute="leading" id="8ay-JB-uuc"/>
+                            <constraint firstItem="1ri-wZ-zaZ" firstAttribute="trailing" secondItem="5Bx-5h-mBj" secondAttribute="trailing" id="fUG-Yf-91H"/>
+                            <constraint firstItem="5Bx-5h-mBj" firstAttribute="top" secondItem="1ri-wZ-zaZ" secondAttribute="top" id="og6-1C-R5d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1ri-wZ-zaZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="5Bx-5h-mBj" id="Pv8-dg-xTX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mn1-RY-PFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="-48"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="0s9-3J-xLF">
+            <objects>
+                <viewController restorationIdentifier="WKWebViewControllerID" storyboardIdentifier="WKWebViewControllerID" id="tNn-pI-hsm" customClass="WKWebViewController" customModule="DemoWebView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xnu-2O-fUm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRI-oe-n5h">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ty6-l1-njr">
+                                <rect key="frame" x="31" y="617" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="goBackDidTapped:" destination="tNn-pI-hsm" eventType="touchUpInside" id="YcE-sh-Oeh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vt-ae-arH">
+                                <rect key="frame" x="76" y="617" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeButtonDiDTapped:" destination="tNn-pI-hsm" eventType="touchUpInside" id="hwX-lM-ysR"/>
+                                    <action selector="closeDidTapped:" destination="yxV-Cq-jFa" eventType="touchUpInside" id="GG9-Vl-TiJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wEZ-TL-jh7" firstAttribute="trailing" secondItem="xRI-oe-n5h" secondAttribute="trailing" id="AEy-ij-nIr"/>
+                            <constraint firstItem="xRI-oe-n5h" firstAttribute="leading" secondItem="wEZ-TL-jh7" secondAttribute="leading" id="Bpn-00-q3k"/>
+                            <constraint firstItem="xRI-oe-n5h" firstAttribute="top" secondItem="wEZ-TL-jh7" secondAttribute="top" id="NTm-Wg-hMK"/>
+                            <constraint firstItem="wEZ-TL-jh7" firstAttribute="bottom" secondItem="xRI-oe-n5h" secondAttribute="bottom" id="y1V-Qf-5BB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wEZ-TL-jh7"/>
+                    </view>
+                    <connections>
+                        <outlet property="baseView" destination="xRI-oe-n5h" id="hvU-yd-RO3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vor-IX-VX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1335" y="-48"/>
+        </scene>
+    </scenes>
+</document>
